@@ -1,285 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shree Ramesh Construction Material</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Pakodi Wale - Gorakhpur</title>
+    <!-- Tailwind CSS for Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
 
-<style>
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f4f4f4;
-}
+        /* Floating Buttons Styling */
+        .fab-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+        
+        .fab-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            text-decoration: none;
+        }
 
-/* Loader */
-#loader{
-position:fixed;
-width:100%;
-height:100%;
-background:#222;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:24px;
-z-index:9999;
-}
+        .fab-btn:hover { transform: scale(1.1); }
+        
+        .whatsapp { background-color: #25D366; }
+        .call { background-color: #007bff; }
+        .payment { background-color: #6f42c1; } /* Purple for GPay/PhonePe */
 
-/* Welcome Popup */
-.popup{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.7);
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:9998;
-}
-
-.popup-box{
-background:white;
-padding:30px;
-border-radius:10px;
-text-align:center;
-}
-
-.popup-box h2{
-color:#ff9800;
-}
-
-header{
-background:#222;
-color:white;
-padding:15px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-size:22px;
-color:#ff9800;
-font-weight:bold;
-}
-
-nav a{
-color:white;
-margin:0 10px;
-text-decoration:none;
-}
-
-.hero{
-background:url("https://images.unsplash.com/photo-1504307651254-35680f356dfd") center/cover;
-height:70vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-background-color:rgba(0,0,0,0.6);
-background-blend-mode:darken;
-}
-
-.btn{
-background:#ff9800;
-padding:12px 25px;
-border:none;
-color:white;
-cursor:pointer;
-}
-
-.section{
-padding:50px 5%;
-text-align:center;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-border-radius:10px;
-padding:20px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-
-.card img{
-width:100%;
-border-radius:8px;
-}
-
-.price{
-color:#ff9800;
-font-weight:bold;
-}
-
-.gallery img{
-height:200px;
-object-fit:cover;
-}
-
-.contact{
-background:white;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-font-size:20px;
-text-decoration:none;
-}
-
-.call{
-position:fixed;
-bottom:80px;
-right:20px;
-background:#ff9800;
-color:white;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
-}
-
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:15px;
-}
-</style>
+        /* Hero Background */
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-800">
 
-<body>
+    <!-- Navbar -->
+    <nav class="bg-orange-600 text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-wide">
+                <i class="fa-solid fa-shop"></i> VISHAL PAKOIDI WALE
+            </h1>
+            <a href="tel:+916392176746" class="text-sm font-semibold bg-white text-orange-600 px-3 py-1 rounded-full">
+                <i class="fa-solid fa-phone"></i> 6392176746
+            </a>
+        </div>
+    </nav>
 
-<div id="loader">Loading Website...</div>
+    <!-- Hero Section -->
+    <header class="hero-bg h-80 flex items-center justify-center text-center text-white px-4">
+        <div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-2">Crispy & Hot Pakodis</h2>
+            <p class="text-xl font-medium">"A Test Mein Best Vishal Ka Pakodi Is The Best"</p>
+            <p class="mt-2 text-orange-300 font-semibold">Gorakhpur's No.1 Pakodi Wale</p>
+            <a href="#menu" class="mt-6 inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                Order Now
+            </a>
+        </div>
+    </header>
 
-<div id="welcomePopup" class="popup">
-<div class="popup-box">
-<h2>Welcome</h2>
-<p>Welcome to Shree Ramesh Construction Material</p>
-<button class="btn" onclick="closePopup()">Enter Website</button>
-</div>
-</div>
+    <!-- Menu Section -->
+    <section id="menu" class="container mx-auto py-12 px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">Our <span class="text-orange-600">Menu</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Product 1: Allu Pakodi -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1615557960916-5f4791effe9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Allu Pakodi" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold">Allu (Aloo) Pakodi</h3>
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Starting @ ₹5</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Crispy potato fritters made with fresh spices.</p>
+                    <button onclick="orderOnWhatsApp('Allu Pakodi')" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> Order Now
+                    </button>
+                </div>
+            </div>
 
-<header>
-<div class="logo">Shree Ramesh Material</div>
-<nav>
-<a href="#">Home</a>
-<a href="#products">Products</a>
-<a href="#price">Price</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
+            <!-- Product 2: Gobhi Pakodi -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1630409351217-bc4fa6422075?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gobhi Pakodi" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold">Gobhi Pakodi</h3>
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Starting @ ₹5</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Fresh cauliflower sliced and fried to perfection.</p>
+                    <button onclick="orderOnWhatsApp('Gobhi Pakodi')" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> Order Now
+                    </button>
+                </div>
+            </div>
 
-<section class="hero">
-<h1>Best Quality Construction Materials</h1>
-<p>Cement | Sariya | Gitti | Balu | Bricks Available</p>
-</section>
-
-<section id="products" class="section">
-<h2>Our Products</h2>
-<div class="grid">
-
-<div class="card">
-<img src="https://placehold.co/300x200?text=Cement">
-<h3>Cement</h3>
-<p class="price">₹350 / Bag</p>
-</div>
-
-<div class="card">
-<img src="https://placehold.co/300x200?text=TMT+Sariya">
-<h3>TMT Sariya</h3>
-<p class="price">₹45000 / Ton</p>
-</div>
-
-<div class="card">
-<img src="https://placehold.co/300x200?text=Gitti">
-<h3>Gitti</h3>
-<p>All Sizes Available</p>
-</div>
-
-<div class="card">
-<img src="https://placehold.co/300x200?text=Balu">
-<h3>Balu (Sand)</h3>
-<p>River Sand Available</p>
-</div>
-
-</div>
-</section>
-
-<section id="price" class="section">
-<h2>Today's Price List</h2>
-<div class="grid">
-<div class="card">Ultratech Cement – ₹350</div>
-<div class="card">ACC Cement – ₹345</div>
-<div class="card">Ambuja Cement – ₹340</div>
-<div class="card">TMT Sariya – ₹45000 / Ton</div>
-</div>
-</section>
-
-<section id="gallery" class="section">
-<h2>Shop Gallery</h2>
-<div class="grid gallery">
-<img src="https://placehold.co/300x200?text=Shop+1">
-<img src="https://placehold.co/300x200?text=Material">
-<img src="https://placehold.co/300x200?text=Truck+Loading">
-<img src="https://placehold.co/300x200?text=Stock">
-</div>
-</section>
-
-<section id="contact" class="section contact">
-<h2>Contact Us</h2>
-
-<p><b>Address:</b> Raji Akala No.1, Post Gulhariya Medical College Road, Gorakhpur</p>
-<p><b>Phone:</b> 9792246824 | 8400879638</p>
-
-<iframe
-src="https://maps.google.com/maps?q=gulhariya%20medical%20college%20road%20gorakhpur&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%"
-height="300"
-style="border:0;">
-</iframe>
-
-<br><br>
-
-<a href="tel:9792246824">
-<button class="btn">Call Now</button>
-</a>
-
-</section>
-
-<footer>
-© 2026 Shree Ramesh Construction Material
-</footer>
-
-<a class="whatsapp" href="https://wa.me/919792246824">W</a>
-<a class="call" href="tel:9792246824">📞</a>
-
-<script>
-window.onload=function(){
-setTimeout(function(){
-document.getElementById("loader").style.display="none";
-},1500);
-}
-
-function closePopup(){
-document.getElementById("welcomePopup").style.display="none";
-}
-</script>
-
-</body>
-</html>
+            <!-- Product 3: Dal Tikkiya -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                <img src="https://t3.ftcdn.net/jpg/04/26/42/47/360_F_426424753_yaXeKg0qrzS4ZCf8C3h1y7d5J2eE7e8Y.jpg" alt="Dal Tikkiya" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold">Dal Tikkiya</h3>
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Starting @ ₹5</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Soft lentil cakes with authentic spices.</p>
+                    <button onclick="orderOnWhatsApp('Dal Tikkiya')" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> Order Now
+                    </button>
+                </div>
+            </div>
+            
+             <!-- Product 4: Onion Pakodi -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1599238765487-6a4e4f507213?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Onion Pakodi" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold">Onion Pakodi</h3>
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">Starting @ ₹5</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">Crunchy onion fritters, a timeless classic.</p>
+                    <button onclick="orderOnWhatsApp('Onion Pakodi')" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> Order Now
+  </button>
